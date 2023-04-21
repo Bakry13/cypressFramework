@@ -1,0 +1,30 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^16.0.3",
+    "@cypress/webpack-preprocessor": "^5.17.0",
+    "@cypress/xpath": "^2.0.3",
+    "cypress": "^12.9.0",
+    "cypress-mochawesome-reporter": "^3.3.0",
+    "neat-csv": "^5.0.0",
+    "node": "^19.8.1",
+    "node-xlsx": "^0.21.0"
+  },
+  "dependencies": {
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "xlsx": "^0.18.5"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/e2e/stepDef/*.js"
+  }
+}
