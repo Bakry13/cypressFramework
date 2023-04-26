@@ -1,0 +1,30 @@
+export class Assertions{
+    assertElementExist(locator)
+    {
+        cy.get(locator).should('be.visisble');
+    }
+    assertElementNotExist(locator)
+    {
+        cy.get(locator).should('not.be.visisble');
+    }
+    assertElementEnabled(locator)
+    {
+        cy.get(locator).should('be.enaabled');
+    }
+    assertElementDisabled(locator)
+    {
+        cy.get(locator).should('be.disabled');
+    }
+    assertElementText(locator,expectedText)
+    {
+        cy.get(locator).should('have.text',expectedText);
+    }
+    assertListSize(locator,expectedSize)
+    {
+        cy.get('button:visible:contains("Submit")').should('have.length', expectedSize);
+    }
+    assertPageTitle(expectedTitle)
+    {
+        cy.title().should('eq',expectedTitle);
+    }
+}

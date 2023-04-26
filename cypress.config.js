@@ -20,11 +20,14 @@ module.exports = defineConfig({
     saveAllAttempts: false,
   },
 
+  env: {
+    orangeHRM_URL: 'https://opensource-demo.orangehrmlive.com'
+  },
+
   e2e: {
-    baseUrl: 'https://opensource-demo.orangehrmlive.com',
-    specPattern: "**/*.feature",
+    baseURL: 'https://opensource-demo.orangehrmlive.com',
+    // specPattern: "**/*.feature",
     //cucumber spec configuration
-    // setupNodeEvents,
 
     setupNodeEvents(on, config) {
       // on('file:preprocessor', cucumber());
@@ -81,35 +84,3 @@ module.exports = defineConfig({
   },
 
 });
-//================================================================================================
-// async function setupNodeEvents(on, config) {
-//   // This is required for the preprocessor to be able to generate JSON reports after each run, and more,
-//   await preprocessor.addCucumberPreprocessorPlugin(on, config);
-
-//   on(
-//     "file:preprocessor",
-//     webpack({
-//       webpackOptions: {
-//         resolve: {
-//           extensions: [".ts", ".js"],
-//         },
-//         module: {
-//           rules: [
-//             {
-//               test: /\.feature$/,
-//               use: [
-//                 {
-//                   loader: "@badeball/cypress-cucumber-preprocessor/webpack",
-//                   options: config,
-//                 },
-//               ],
-//             },
-//           ],
-//         },
-//       },
-//     })
-//   );
-
-//   // Make sure to return the config object as it might have been modified by the plugin.
-//   return config;
-// }

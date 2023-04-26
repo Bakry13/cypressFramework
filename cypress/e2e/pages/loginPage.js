@@ -1,5 +1,9 @@
+const { Assertions } = require("../../support/assertions");
+
 export class LoginPage{
-    orangeHRMURL = 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login';
+    assertions = new Assertions();
+    // orangeHRMURL = 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login';
+    orangeHRMURL = Cypress.env("orangeHRM_URL");
     username = '[name="username"]';
     password = 'input[placeholder="Password"]';
     signInButton = 'button'; 
@@ -34,6 +38,7 @@ export class LoginPage{
 
     validateOnPageTitle()
     {
-        cy.title().should('eq',this.pageTitle);
+        this.assertions.assertPageTitle(this.pageTitle);
+        // cy.title().should('eq',this.pageTitle);
     }
 }
