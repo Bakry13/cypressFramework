@@ -4,6 +4,10 @@
 
 *- You can use this framework to be a start point for your test automation project to write your automated test cases.*
 
+*- Page Object Model design pattern with data driven concept are included in this project*
+
+*- A report plugin is used in the automation project which is called "cypress-mochawesome-reporter"*
+
 *- You can find more details in cypress official website documentation:*
 https://docs.cypress.io/guides/overview/why-cypress
 
