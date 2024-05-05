@@ -83,8 +83,6 @@ https://code.visualstudio.com/download
 
 * Choose the target test file
 
-#### 2- Check the errors across the files
-
 ## `Project Structure:`
 *The below is a package diagram for the implemented project structure "Files and folders"*
 
